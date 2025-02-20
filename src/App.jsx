@@ -1,14 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
-
+import { Container } from "@mui/material";
+import Maincontent from "./Maincontent";
 function App() {
   return (
-  <h1>hello world</h1>
-  
- 
-  )
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <Container maxWidth="lg">
+        <Maincontent />
+
+        </Container>
+       
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
