@@ -10,6 +10,7 @@ function App() {
           alignItems: "center",
           height: "100vh",
         }}
+        
       >
         <Container maxWidth="xl">
         <Maincontent />
