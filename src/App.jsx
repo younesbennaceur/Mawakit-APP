@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import Maincontent from "./Maincontent";
+import Maincontent from "./assets/components/Maincontent";
 function App() {
   return (
     <>
@@ -11,7 +11,7 @@ function App() {
           height: "100vh",
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
         <Maincontent />
 
         </Container>
