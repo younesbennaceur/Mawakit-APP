@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import Maincontent from "./assets/components/Maincontent";
+import Maincontent from "./assets/components/Maincontent.jsx";
 function App() {
   return (
     <>
@@ -9,10 +9,11 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
+          
         }}
         
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
         <Maincontent />
 
         </Container>
