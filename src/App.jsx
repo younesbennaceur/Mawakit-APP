@@ -12,7 +12,7 @@ function App() {
         }}
         
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
         <Maincontent />
 
         </Container>

@@ -11,6 +11,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Maincontent() { 
+  const [selectedCity, setSelectedCity] = useState("Paris");
+  const [availableCities, setAvailableCities] = useState(["Paris", "Marseille", "Lyon"]);
+  
   const [timing, setTiming] = useState({
             Fajr: "05:52",
             Dhuhr: "13:00",
@@ -19,9 +22,22 @@ export default function Maincontent() {
             Isha: "20:03",
   });
   const keys = Object.keys(timing);
+  const userDate = new Date(); // Gets the local date and time
+  const localString = userDate.toLocaleString(); // Converts the date and time to a string
+  const getTiming = async () => {
+    const response = await axios.get(
+      `http://api.aladhan.com/v1/timingsByCity?city=${selectedCity}&country=France&method=8`
+    );
+    const data = response.data.data.timings;
+    setTiming(data);
+  }
+  useEffect(() => {
+    getTiming();
+    
+  }, [selectedCity]);
   
   const handleChange = (event) => {
-  console.log(event.target.value);
+  setSelectedCity(event.target.value);
   };
   return (
     <>
@@ -30,7 +46,7 @@ export default function Maincontent() {
           <h1 className=" text-lg font-medium opacity-90">
             Jeudi, 20 Février 2025
           </h1>
-          <h1 className=" text-3xl font-bold">Paris | France</h1>
+          <h1 className=" text-3xl font-bold">{selectedCity} | France</h1>
         </Grid>
         <Grid className=" mb-5 flex-1 flex flex-col gap-5 ">
           <h2 className=" text-lg font-medium opacity-90">
@@ -77,15 +93,17 @@ export default function Maincontent() {
             <span style={{ color: "white" }}>La Region</span>{" "}
           </InputLabel>
           <Select
+          style={{ color: "white" }}
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             //value={age}
             label="Age"
             onChange={handleChange}
           >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            
+            {availableCities.map((city) => (
+              <MenuItem value={city}>{city}</MenuItem>
+            ))}
           </Select>
         </FormControl>
       </Box>
