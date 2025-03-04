@@ -106,7 +106,7 @@ export default function Maincontent() {
     // now we know what's the next prayer
     const nextPrayerTime = timing[nextPrayer];
     const nextPrayerTimeMoment = moment(nextPrayerTime, "hh:mm");
-    
+
     console.log(nextPrayerTime);
     let remainingTime = moment(nextPrayerTime, "hh:mm").diff(momentNow);
     
@@ -157,17 +157,16 @@ export default function Maincontent() {
         <Prayer
           name="Fajr"
           time={timing.Fajr}
-          image="https://img.freepik.com/photos-gratuite/coucher-soleil-desert-mosquee-musulman-au-premier-plan_1385-1.jpg?t=st=1740100436~exp=1740104036~hmac=869610ead14fd03d661cdb456f7a2f8d68db5e13d3b2ed4c6d1b7a789ddc1398&w=1380"
+          image="https://img.freepik.com/photos-gratuite/priere-spirituelle-mains-soleil-brille-beau-coucher-soleil-floue_1150-7173.jpg?t=st=1741128472~exp=1741132072~hmac=8822807ea4f4400f783ef4c46d52e2f0ede5b63e7be73f8e773875ebbb7486e9&w=1380"
         />
         <Prayer
           name="Dhuhr"
           time={timing.Dhuhr}
-          image="https://img.freepik.com/photos-gratuite/coucher-soleil-desert-mosquee-musulman-au-premier-plan_1385-1.jpg?t=st=1740100436~exp=1740104036~hmac=869610ead14fd03d661cdb456f7a2f8d68db5e13d3b2ed4c6d1b7a789ddc1398&w=1380"
-        />
+          image= "https://img.freepik.com/photos-gratuite/beau-paysage-mere-nature_23-2148992408.jpg?t=st=1741129151~exp=1741132751~hmac=4743234bc509760fb4170a34e08a768e4f959332e57fc018e9ff11b5ffa2b141&w=1380"      />
         <Prayer
           name="Asr"
           time={timing.Asr}
-          image="https://img.freepik.com/photos-gratuite/coucher-soleil-desert-mosquee-musulman-au-premier-plan_1385-1.jpg?t=st=1740100436~exp=1740104036~hmac=869610ead14fd03d661cdb456f7a2f8d68db5e13d3b2ed4c6d1b7a789ddc1398&w=1380"
+          image="https://img.freepik.com/photos-gratuite/design-lanterne-style-islamique-pour-celebration-du-ramadan-espace-copie_23-2151183967.jpg?t=st=1741128922~exp=1741132522~hmac=6e4b13d832a2a0d2801e48d129ccbef52bcc9e882f3bcecaac26f241bb9a5562&w=1380"
         />
         <Prayer
           name="Maghrib"
@@ -177,7 +176,7 @@ export default function Maincontent() {
         <Prayer
           name="Isha"
           time={timing.Isha}
-          image="https://img.freepik.com/photos-gratuite/coucher-soleil-desert-mosquee-musulman-au-premier-plan_1385-1.jpg?t=st=1740100436~exp=1740104036~hmac=869610ead14fd03d661cdb456f7a2f8d68db5e13d3b2ed4c6d1b7a789ddc1398&w=1380"
+          image="https://img.freepik.com/photos-gratuite/mosquee-bleue-istanbul_1157-8842.jpg?t=st=1741128677~exp=1741132277~hmac=86a53c5a283d3110b03c0b42637f50b07d5f99e402cbb1913d5859c29513c9db&w=1380"
         />
       </Stack>
       <Box className=" flex justify-center  mt-10">
